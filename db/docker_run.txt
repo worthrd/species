@@ -1,0 +1,7 @@
+docker build -t worthrd/docker-species .
+
+docker run --rm --name species -v $HOME/DEV/monday/docker_python_postgresql/db/pgdata:/var/lib/postgresql/tsvs -p 5432:5432 worthrd/postgre-species
+
+docker run --rm --name species -p 5432:5432 worthrd/postgre-species
+
+psql postgres://recep:342516@localhost:5432/species
